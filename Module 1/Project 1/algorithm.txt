@@ -1,0 +1,13 @@
+Objective: "Compose a program that generates a random number for the user to guess."
+
+1. Generate a random number between 1 and 100.
+2. Ask the user to guess the number as many times as necessary until the guess is correct:
+    a. Keep track of the number of attempts the user made, in order to:
+        i. Tell them at the end how many attempts it took.
+        ii. Provide a hint after the second incorrect guess, out of these three options:
+            1. The number is an even/odd number.
+            2. The number is a multiple of 5.
+            3. The number to the power of two is greater or less than 1,000.
+    b. If the user's guess is correct:
+        i. Congratulate them.
+        ii. End the program while telling them how many attempts it took.

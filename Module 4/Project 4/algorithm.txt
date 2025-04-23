@@ -1,0 +1,48 @@
+Music Library
+
+1. Main menu
+    a. Add user (only option initially available)
+    b. Change user
+    c. Add a song
+    d. Get song details
+    e. Update song details
+    f. Delete a song
+    g. Display all songs
+2. Add user flow
+    a. Prompt user to enter their name
+    b. Save a user object with their name and initially an empty list of songs
+        i. Song object should have fields for title and other details such as artist and album
+-> NOTE: all subsequent steps assume user is logged in........
+3. Add song flow
+    a. Once logged in, user can choose "Add a song" from the main menu
+    b. User is prompted for basic song details, such as title, artist, and album
+    c. Song object is saved to the user's songs list
+4. Get song details flow
+    a. User chooses "Get song details" from the main menu
+    b. User is prompted to enter the title of the song they want details for
+    c. The application searches the user's song list for a matching title
+    d. If a match is found, the song's details (title, artist, album, etc.) are displayed
+    e. If no match is found, an appropriate message is shown to the user
+5. Update song details flow
+    a. User chooses "Update song details" from the main menu
+    b. User is prompted to enter the title of the song they want to update
+    c. The application searches the user's song list for a matching title
+    d. If a match is found, the user is prompted to update the song's details (e.g., artist, album)
+    e. The updated details are saved to the song object
+    f. If no match is found, an appropriate message is shown to the user
+6. Delete a song flow
+    a. User chooses "Delete a song" from the main menu
+    b. User is prompted to enter the title of the song they want to delete
+    c. The application searches the user's song list for a matching title
+    d. If a match is found, the song is removed from the user's song list
+    e. If no match is found, an appropriate message is shown to the user
+7. Display all songs flow
+    a. User chooses "Display all songs" from the main menu
+    b. The application retrieves and displays a list of all songs in the user's song list, including their details
+    c. If the user's song list is empty, an appropriate message is shown to the user
+8. Change user flow
+    a. User chooses "Change user" from the main menu
+    b. User is prompted to enter a user name
+    c. The application searches the users for the given user name
+    d. If a match is found, that becomes the user
+    e. If not match is found, an appropriate message is shown to the user

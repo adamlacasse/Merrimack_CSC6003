@@ -1,0 +1,13 @@
+Objective: Build a variation of the game Battleship
+
+1. Create a 10x10 grid
+2. Randomly select 5 locations on the grid to place 5 ships (one cell per ship)
+    a. Be sure that the 5 random locations do not overlap
+    b. Present the game board to the user to start the game
+3. Game play
+    a. User inputs a column and row
+        i. If the user's input is off the board, let them know and ask again for the input
+        ii. If that cell corresponds to a ship, mark the cell as a "hit," and give user feedback
+        iii. If the cell does not correspond to a ship, mark the cell as a "miss," and give user feedback
+        iV. After any of steps i - iii, redraw the game board with the latest information and present it to the user
+    d. Once all of the ships have been hit, the game is won. Congratulate the user.

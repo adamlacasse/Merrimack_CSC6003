@@ -1,0 +1,11 @@
+Text editor program
+
+1. Select a text file to read and edit
+2. User can...
+    a. Get the top five most common words
+    b. Find the number of times a given word appears
+    c. Replace instances of one word with another
+    d. Add text to the file
+    e. Delete the first instance of given text
+    f. Highlight a chosen word
+3. Save the changes to the file
