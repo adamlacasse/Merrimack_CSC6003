@@ -1,0 +1,24 @@
+Folder System
+
+1. Folder class that represents a folder in a simplified file system
+    a. Contains "files" as strings
+    b. Contains subfolders that also can hold files and subfolders
+    c. Attributes
+        i. Folder name
+        ii. List of files
+        iii. List of subfolders
+    d. methods
+        i. add_file
+        ii. add_subfolder
+        iii. select_folder: takes a folder name and makes it the current open folder
+        iv. __count_files: Recursively counts the total number of files in the current open folder and all of its subfolders
+        v. __eq__: Compares a folder and a string. They are equal if they have the same folder name
+        vi. __len__: Returns the total number of files in the folder and all its subfolders
+        vii. __str__: Returns a string representation of the folder, showing the folder name, its files, and its subfolders, using indentation for nested subfolders
+2. Main menu
+    a. Initially prompts the user to add the root folder
+    b. Once there is a root folder; there is a menu that has the ability to...
+        i. Add a file
+        ii. Add a subfolder
+        iii. Select the currently open folder by choosing its name
+        iv. Print the folder contents of the currently selected folder
