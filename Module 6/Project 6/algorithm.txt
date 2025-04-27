@@ -1,0 +1,34 @@
+Zoo
+
+1. Animal. Base class from which more specific animals are created.
+    a. Attributes
+        i. name
+        ii. species
+    b. Methods
+        i. make_sound
+            - Generic sound for base class; overridden for specific animal sound in subclasses
+        ii. info
+            - Returns a formatted string with the animals name, species, and sound
+2. Subclasses
+    a. Bear
+        i. Extra attributes
+            1. fur_color: string
+        ii. Overrides
+            1. make_sound returns "roar"
+            2. info adds fur_color
+    b. Elephant
+        i. Extra attributes
+            1. weight: float
+        ii. Overrides
+            1. make_sound returns "trumpet"
+            2. info adds weight
+    c. Penguin
+        i. Extra attributes
+            1. height: float
+        ii. Overrides
+            1. make_sound returns "squawk"
+            2. info adds height
+3. Main menu
+    a. Add animal to zoo
+    b. Print all animals in the zoo
+    c. Print all animals of a species
