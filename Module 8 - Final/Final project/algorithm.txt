@@ -1,0 +1,46 @@
+Banking app
+
+1. All functionality is housed inside a BankManager class
+    a. Methods
+        i. main
+            - Entry point to start the application
+        ii. promptForAccountNumberAndPIN
+            - Takes one parameter, a Bank object that represents the bank
+            1. Prompts user for account number
+                a. If the account exists, user is prompted for the PIN
+                    i. If the PIN is correct, method returns the Account object
+                    ii. If the PIN is incorrect, user is notified and method returns null
+                b. If the account does not exist, user is notified and method returns null
+2. Main menu (represents all user features)
+    1. Open an account
+    2. Get account information and balance
+    3. Change PIN
+    4. Deposit money in account
+    5. Transfer money between accounts
+    6. Withdraw money from account
+    7. ATM withdrawal
+    8. Deposit change
+    9. Close an account
+    10. Add monthly interest to all accounts
+    11. End Program
+3. Bank class
+4. Account class
+    a. Attributes
+        i. Account number – a randomly generated 8-digit integer that cannot start with a 0
+        ii. Owner First Name – a String that contains the first name of the account owner
+        iii. Owner Last Name – a String that contains the last name of the account owner
+        iv. Social Security Number – a String (not an integer) that contains the 9 digits of the account owner’s social security number (Note: do not use real social security numbers – use 999 or 000 as the first three digits for this program)
+        v. PIN – a String that represents the account owner’s 4-digit personal identification number – randomly generated upon account creation and may start with one or more zeroes
+        vi. Balance – a number that represents the account balance in cents
+5. CoinCollector class
+    a. parseChange method
+        i. Takes one parameter: a string that represents a set of coins/change
+            o ‘P’ represents a penny (1 cent)
+            o ‘N’ represents a nickel (5 cents)
+            o ‘D’ represents a dime (10 cents)
+            o ‘Q’ represents a quarter (25 cents)
+            o ‘H’ represents a half-dollar (50 cents)
+            o ‘W’ represents a whole dollar (100 cents)
+            TODO: is this the expected string type? e.g. "PPPPPNNNDDQHWW"
+        ii. Returns a long, which is the total of the coins in cents
+6. BankUtility class
