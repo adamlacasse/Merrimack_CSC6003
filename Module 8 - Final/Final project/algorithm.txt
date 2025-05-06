@@ -41,6 +41,5 @@ Banking app
             o ‘Q’ represents a quarter (25 cents)
             o ‘H’ represents a half-dollar (50 cents)
             o ‘W’ represents a whole dollar (100 cents)
-            TODO: is this the expected string type? e.g. "PPPPPNNNDDQHWW"
         ii. Returns a long, which is the total of the coins in cents
 6. BankUtility class

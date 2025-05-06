@@ -1,0 +1,26 @@
+Mythical Creature Family tree
+
+"
+    Create a program that simulates a simple family tree of mythical 
+    creatures, where the progenitor of the family tree of is at the 
+    root, and their descendants are nodes in a binary tree. Each mythical 
+    creature can have two direct descendants. The program allows users to 
+    search for a specific creature and find their ancestors, as well as 
+    print out the tree on Creatures.
+
+    Your menu should allow for the user to add a child/root, print the 
+    tree, and search the tree for a specific creature then print all its ancestors.
+"
+
+1. Create a "Creature" node
+    a. Option to have two child nodes
+    b. Methods to add child nodes, search for a creature, and print the tree
+2. Create a menu
+    a. If there are no nodes yet created, prompt user to create a root Creature
+    b. Allow the user to add child nodes to an existing creature node
+    c. Provide an option to print the entire tree structure
+    d. Allow the user to search for a specific creature and display all its ancestors
+3. Develop the main program
+    a. Display the menu options to the user
+    b. Handle user input to perform actions such as adding nodes, printing the tree, and searching for creatures
+    c. Ensure proper error handling for invalid inputs or actions
