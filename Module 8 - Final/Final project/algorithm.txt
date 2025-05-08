@@ -13,17 +13,63 @@ Banking app
                 b. If the account does not exist, user is notified and method returns null
 2. Main menu (represents all user features)
     1. Open an account
+        a. Prompt user for their first and last name, and social security number
+        b. Prompt user for a PIN
+            i. Validate PIN against isValidPIN method
+        c. Randomly assign an account number that does not already exist
+        d. Return the assigned account number to the user
     2. Get account information and balance
+        a. Prompt user for account number and PIN
+        b. If the account number and PIN are valid, print the account details including current balance
     3. Change PIN
+        a. Prompt user for account number and PIN
+        b. If the account number and PIN are valid, prompt user for a new PIN
+        c. Have the user reenter the new PIN to validate
+        d. Change the PIN on the account to the new PIN
     4. Deposit money in account
+        a. Prompt user for account number and PIN
+        b. If the account number and PIN are valid, prompt user to enter a positive number with up to two decimal points (cents)
+        c. Call deposit method on the account, adding the amount to the balance
     5. Transfer money between accounts
+        a. Prompt user for account number and PIN of FROM account
+        b. Prompt user for account number and PIN of TO account
+        c. If both accounts and PINs are valid, prompt user to enter a positive number with up to two decimal points (cents) to transfer
+        d. Call the appropriate withdraw and deposit methods to update balances
+            * Make sure the withdrawal account has enough balance to cover the transaction
+        e. Display the new balances for each account
     6. Withdraw money from account
+        a. Prompt user for account number and PIN
+        b. If the account number and PIN are valid, prompt user to enter a positive number with up to two decimal points (cents)
+        c. Call withdraw method on the account, subtracting the amount to the balance
+            * Make sure the account has enough balance to cover the transaction
     7. ATM withdrawal
+        a. Similar to a withdrawal as step 6, with these additional constraints
+            i. Amount must be in whole dollars
+            ii. Minimum of $5 and maximum of $1,000
+            iii. Amount must be divisible by 5
+        b. Calculate the user's amount by listing the maximum number of 20, 10, and 5 dollar bills to total the chosen amount
+        c. Display the above calculation, as well as the new account balance
+            * Make sure the account has enough balance to cover the transaction
     8. Deposit change
+        a. Deposit money into an account similar to step 4, but with the specifications outlined in the CoinCollector class
     9. Close an account
+        a. Prompt/validate account number and PIN
+        b. Remove account from bank (extra idea: display balance that will be "given" to user)
     10. Add monthly interest to all accounts
+        a. Calculate a monthly interest payment for each account based on its current balance and a user-input annual interest rate
+        b. Deposit that amount; display the result
+into that account.
     11. End Program
 3. Bank class
+    a. Attributes
+        i. Accounts
+        ii. maxAccounts
+            - A constant that represents the greatest number of accounts the bank can support
+    b. Methods
+        i. addAccountToBank
+        ii. removeAccountFromBank
+        iii. findAccount
+        iv. (extra credit) addMonthlyInterest
 4. Account class
     a. Attributes
         i. Account number – a randomly generated 8-digit integer that cannot start with a 0
@@ -32,6 +78,12 @@ Banking app
         iv. Social Security Number – a String (not an integer) that contains the 9 digits of the account owner’s social security number (Note: do not use real social security numbers – use 999 or 000 as the first three digits for this program)
         v. PIN – a String that represents the account owner’s 4-digit personal identification number – randomly generated upon account creation and may start with one or more zeroes
         vi. Balance – a number that represents the account balance in cents
+    b. Methods
+        i. Getters and setters for each attribute
+        ii. deposit
+        iii. withdraw
+        iv. isValidPIN
+        v. toString
 5. CoinCollector class
     a. parseChange method
         i. Takes one parameter: a string that represents a set of coins/change
@@ -43,3 +95,8 @@ Banking app
             o ‘W’ represents a whole dollar (100 cents)
         ii. Returns a long, which is the total of the coins in cents
 6. BankUtility class
+    a. Methods
+        i. promptUserForString
+        ii. promptUserForPositiveNumber
+        iii. convertFromDollarsToCents
+        iv. generateRandomInteger
