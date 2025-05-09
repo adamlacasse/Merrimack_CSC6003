@@ -14,7 +14,7 @@ class Account:
         return False
 
     def withdraw(self, amount):
-        if isinstance(amount, (int, float)) and amount > 0:
+        if isinstance(amount, (int, float)) and amount > 0 and amount <= self.balance:
             self.balance -= amount
             return True
         return False

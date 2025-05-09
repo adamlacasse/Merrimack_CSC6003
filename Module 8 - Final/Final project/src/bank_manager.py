@@ -51,10 +51,12 @@ class BankManager:
                 account = Account(acct_num, first, last, ssn, pin)
                 bank.add_account_to_bank(account)
                 print(f"Account created! Your account number is: {acct_num}")
+
             elif choice == '2':
                 account = BankManager.prompt_for_account_number_and_pin(bank)
                 if account:
                     print(account)
+
             elif choice == '3':
                 account = BankManager.prompt_for_account_number_and_pin(bank)
                 if account:
@@ -65,6 +67,7 @@ class BankManager:
                             print("PIN changed successfully.")
                             break
                         print("Invalid PIN. Please enter a 4-digit number.")
+
             elif choice == '4':
                 account = BankManager.prompt_for_account_number_and_pin(bank)
                 if account:
@@ -74,6 +77,7 @@ class BankManager:
                         print(f"New balance: ${account.balance:.2f}")
                     else:
                         print("Deposit failed.")
+
             elif choice == '5':
                 from_account = BankManager.prompt_for_account_number_and_pin(bank)
                 if from_account:
@@ -87,6 +91,7 @@ class BankManager:
                             print(f"New balance for {to_account.account_number}: ${to_account.balance:.2f}")
                         else:
                             print("Transfer failed.")
+
             elif choice == '6':
                 account = BankManager.prompt_for_account_number_and_pin(bank)
                 if account:
@@ -96,6 +101,7 @@ class BankManager:
                         print(f"New balance: ${account.balance:.2f}")
                     else:
                         print("Withdrawal failed.")
+
             elif choice == '7':
                 account = BankManager.prompt_for_account_number_and_pin(bank)
                 if account:
@@ -105,6 +111,7 @@ class BankManager:
                         print(f"New balance: ${account.balance:.2f}")
                     else:
                         print("ATM withdrawal failed.")
+
             elif choice == '8':
                 account = BankManager.prompt_for_account_number_and_pin(bank)
                 if account:
@@ -121,6 +128,7 @@ class BankManager:
                         print(f"New balance: ${account.balance:.2f}")
                     else:
                         print("Deposit failed.")
+
             elif choice == '9':
                 account = BankManager.prompt_for_account_number_and_pin(bank)
                 if account:
@@ -130,8 +138,14 @@ class BankManager:
                         print(f"Account {account.account_number} closed successfully.")
                     else:
                         print("Failed to close account. Please try again.")
+
+            elif choice == '10':
+                annual_rate = BankUtility.prompt_for_positive_float("Enter annual interest rate as a decimal (e.g. 2.65): ")
+                bank.add_monthly_interest(annual_rate)
+                print(f"Monthly interest added to all accounts at a rate of {annual_rate:.2f}%.")
+
             else:
-                print("Need to figure this out")
+                print("Invalid choice. Please select a valid option.")
 
     @staticmethod
     def prompt_for_account_number_and_pin(bank):

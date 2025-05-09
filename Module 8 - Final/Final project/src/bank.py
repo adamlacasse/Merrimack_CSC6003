@@ -24,6 +24,11 @@ class Bank:
         return None
 
     def add_monthly_interest(self, annual_rate):
+        if self.accounts == []:
+            print("No accounts to add interest to!")
+            return
         for acc in self.accounts:
             interest = int(acc.balance * (annual_rate / 100) / 12)
             acc.deposit(interest)
+            print(f"Monthly interest added to account {acc.account_number}.")
+            print(f"New balance: ${acc.balance:.2f}")
